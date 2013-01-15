@@ -1,0 +1,150 @@
+//
+// "base" partial
+//
+// To make it easier to use all variables and mixins in any Sass file in this
+// theme, each .scss file has a @import "base" declaration. And this _base.scss
+// file is in charge of importing all the other partials needed for the theme.
+//
+// This base partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Next we import Compass plug-ins (Sass mixin libraries).
+// - Last we import a _custom.scss partial that includes our custom mixins.
+//
+
+
+//
+// Legacy IE support
+//
+// These variables are used by many mixins to add additional CSS to support
+// specific versions of IE or specific vendor prefixes.
+//
+// To turn on support for IE6 or IE7, set those variables to true.
+//
+// Zen does not require special handling for IE8 or later. But Compass uses that
+// variable for a couple edge cases. We include it for completeness sake. See
+// the documentation at http://compass-style.org/reference/compass/support/
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: true;
+$legacy-support-for-ie8: true;
+$box-sizing-polyfill-path: "/sites/all/theme/bentley_core/ie/boxsizing.htc" !default;
+
+//
+// Font faces, stacks and sizes.
+//
+
+// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+// rhythm for your entire page. You can see some of its mixins and functions in
+// use in the normalize.scss file.
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+
+$h1-font-size: 2     * $base-font-size;
+$h2-font-size: 1.5   * $base-font-size;
+$h3-font-size: 1.25  * $base-font-size;
+$h4-font-size: 0.75  * $base-font-size;
+$h5-font-size: 1.0   * $base-font-size;
+$h6-font-size: 0.875 * $base-font-size;
+
+// The following font family declarations are based on the Microsoft core web
+// fonts which are common fonts available on most computer systems. The DejaVu
+// and Nimbus Sans fonts are commonly available on Linux systems where the MS
+// fonts are less common. Tahoma and Helvetica are also widely available.
+//
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// First, let's add webfonts and create some font stacks.
+
+@import "http://fast.fonts.com/cssapi/a58e39be-56b2-4a98-a7eb-76d2609157b4.css";
+
+$helvetica:             Helvetica, Arial, sans-serif;
+$helvetica-light:       "Helvetica W01 Light", Helvetica, Arial, sans-serif;
+$helvetica-ultralight:  "HelveticaNeueW01-Thin", "Helvetica W01 Light", Helvetica, Arial, sans-serif;
+$helvetica-condensed:   "Helvetica W01 Light Cn", Helvetica, Arial, sans-serif;
+$caecilia-light:        "PMNCaeciliaW01-45Light", Georgia, serif;
+$caecilia-light-italic: "PMNCaeciliaW01-46LightI", Georgia, serif;
+$caecilia-bold:         "PMNCaeciliaW01-75Bold", Georgia, serif;
+$ampersand:             "Baskerville", "Goudy Old Style", Palatino, "Book Antiqua", serif;
+
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Now create some variables for the font stacks we want to use on this site.
+$base-font-family: $helvetica; // The font family set on the html element.
+$font-body:        $helvetica;
+$font-monospace:   $courier;
+
+
+//
+// Colors, etc.
+//
+
+
+// Color Palette
+
+$black: #000000;
+$white: #ffffff;
+
+// Blues
+$bentley-blue: #0075BE;
+$bentley-blue-hover: #00539C;
+$accent-blue-navy: #00599b;
+$accent-blue-dark: #365375;
+$accent-blue-light: #d0e3ef;
+
+
+// Greys
+
+$accent-grey: #daddde;
+$hover-grey: #e8eced;
+
+$dark-grey: #333333;
+
+
+// Accents
+
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 30px;
+
+
+//
+// Box Shadow Defaults
+//
+
+// The default color for box shadows
+$default-box-shadow-color: rgba(0, 0, 0, 0.5);
+
+// The default horizontal offset. Positive is to the right.
+$default-box-shadow-h-offset: 0px;
+
+// The default vertical offset. Positive is down.
+$default-box-shadow-v-offset: 1px;
+
+// The default blur length.
+$default-box-shadow-blur: 1px;
+
+// The default spread length.
+$default-box-shadow-spread: false;
+
+// The default shadow inset: inset or false (for standard shadow).
+$default-box-shadow-inset: false;
+
+
+//
+// Partials to be shared with all .scss files. See http://compass-style.org/help/
+//
+@import "compass/support";  // Add Compass' IE and vendor prefix support variables.
+@import "compass/utilities/general/clearfix"; // Better than Drupal's clearfix.
+@import "compass/css3";     // Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/typography"; // Add compass typography helpers.
+@import "zen";              // Add the Zen Grids responsive layout mixins.
+@import "custom";           // Import our custom mixins last.

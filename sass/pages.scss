@@ -1,0 +1,727 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+@import "base";
+
+/*------------------------------------------------------------------------------------
+ *                                                                                Body
+------------------------------------------------------------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#page {
+}
+
+.wrapper {
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+
+#skip-link {
+  margin: 0;
+
+  a,
+  a:visited {
+    display: block;
+    width: 100%;
+    padding: 2px 0 3px 0;
+    text-align: center;
+    background-color: #666;
+    color: #fff;
+  }
+}
+
+.ampersand {
+  font-family: $ampersand;
+  font-style: italic;
+  font-weight: 100;
+}
+.hidden {
+}
+#banner.region-full-width {
+  max-width: 100%;
+}
+
+.feed-icon {
+    display: none;
+}
+
+
+/*------------------------------------------------------------------------------------
+ *                                                                                Main
+------------------------------------------------------------------------------------*/
+
+.wrapper.main {
+}
+#main {
+  color: #666;
+  background: rgba(255, 255, 255, 1);
+  border-top: 4px solid #000;
+}
+#content {
+  background: #fff;
+  padding-bottom: rhythm(1);
+}
+
+
+/*------------------------------------------------------------------------------------
+                                                                             Secondary
+------------------------------------------------------------------------------------*/
+
+.wrapper.secondary {
+}
+#secondary {
+  color: #666;
+  background: rgba(255, 255, 255, 1);
+  border-top: 1px solid #d9d9d9;
+}
+#secondary-content {
+  background: #fff;
+  padding-top: rhythm(1);
+}
+
+/*------------------------------------------------------------------------------------
+ *                                                                             Content
+------------------------------------------------------------------------------------*/
+
+.region-highlighted {
+}
+/* The path to the current page in the form of a list of links */
+.breadcrumb { 
+  ol {
+    border-bottom: 1px solid #ddd;
+    margin: rhythm(0.5) 0 rhythm(0.75);
+    margin-left: 30px\9; /* IE8 and below */
+    padding: 0 0 rhythm(0.5) 0;
+  }
+  li {
+    @include adjust-font-size-to($h4-font-size);
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    a {
+      @include hover-link();
+      &:visited {
+        color: #999;
+      }
+    }
+  }
+}
+
+// Heading Typography
+h1.logo, /* The Bentley University Lockup in the header */
+h1.subhead, /* The site specific sub heading in the header */
+h2.node-title, /* Title of a piece of content when it is given in a list of content */
+h2.block-title, /* Block title */
+h2.title, /* Comment section heading */
+h2.comment-form, /* Comment form heading */
+h3.title { /* Comment title */
+  margin: 0;
+}
+
+h1,
+h1.title,
+h2.node-title,
+h2.block-title,
+h2.title,
+h2.comment-form {
+  color: #000;
+  font-family: $helvetica-light;
+  font-weight: 200;
+  line-height: 1.2em;
+}
+
+h1.logo {
+  font-family: $caecilia-light;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @include adjust-font-size-to($h3-font-size);
+  margin: rhythm(0.5) 0;
+}
+h1.logo a {
+  color: #fff;
+  @include hover-link;
+}
+h1.logo .first-word {
+  font-family: $caecilia-bold;
+}
+h1.subhead {
+  font-family: $caecilia-light-italic;
+  font-weight: 400;
+}
+
+h2 {
+  color: $bentley-blue;
+  font-family: $helvetica-condensed;
+  font-weight: 100;
+}
+
+h3 {
+  color: #000;
+  font-family: $helvetica-condensed;
+  font-weight: 100;
+}
+
+h4 {
+  color: $bentley-blue;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h5 {
+  color: #000;
+  font-family: $helvetica-condensed;
+  font-weight: 400;
+}
+
+h6 {
+
+}
+
+/* Heading Helper Classes */
+.heading-1 {
+  @extend h1;
+}
+.heading-2 {
+  @extend h2;
+}
+.heading-3 {
+  @extend h3;
+}
+.heading-4 {
+  @extend h4;
+}
+.heading-5 {
+  @extend h5;
+}
+.size-1 {
+  @include adjust-font-size-to($h1-font-size);
+}
+.size-2 {
+  @include adjust-font-size-to($h2-font-size);
+}
+.size-3 {
+  @include adjust-font-size-to($h3-font-size);
+}
+.size-4 {
+  @include adjust-font-size-to($h4-font-size);
+}
+.size-5 {
+  @include adjust-font-size-to($h5-font-size);
+}
+
+/* Buttons */
+a {
+  outline: none;
+  &:visited,
+  &:hover,
+  &.active {
+    outline: none;
+  }
+}
+a.bluebutton {
+  color: #fff;
+  font-family: $helvetica-condensed;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: rhythm(0.25) rhythm(0.5);
+  display: inline-block;
+  background: $accent-blue-dark;
+  margin-right: rhythm(0.5);
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  @include adjust-font-size-to($h6-font-size);
+
+  &:hover {
+    background: $bentley-blue;
+  }
+}
+
+a.greybutton,
+a.graybutton {
+  color: #fff;
+  font-family: $helvetica-condensed;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: rhythm(0.25) rhythm(0.5);
+  display: inline-block;
+  background: $accent-blue-light;
+  margin-right: rhythm(0.5);
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  @include adjust-font-size-to($h6-font-size);
+
+    &:hover {
+      background: $bentley-blue;
+    }
+}
+
+/* Pagination */
+.item-list ul.pager {
+  text-align: left;
+  li {
+    a {
+      color: $dark-grey;
+      font-family: $helvetica-condensed;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: rhythm(0.25) rhythm(0.75);
+      display: inline-block;
+      background: $accent-grey;
+      letter-spacing: 0.5px;
+      font-weight: 800;
+      @include adjust-font-size-to($h6-font-size);
+
+        &:hover {
+          background: $bentley-blue;
+          color: $white;
+        }
+      }
+     &.pager-current {
+      color: $dark-grey;
+      font-family: $helvetica-condensed;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: rhythm(0.25) rhythm(0.75);
+      display: inline-block;
+      background: $accent-blue-light;
+      letter-spacing: 0.5px;
+      font-weight: 800;
+      @include adjust-font-size-to($h6-font-size);
+    }
+  }
+}
+
+/* BlockQuotes */
+blockquote{
+  float: right;
+  width: 16em;
+  border-left: 2px solid $bentley-blue;
+  padding-left: rhythm(1);
+  margin: rhythm(1) 0 rhythm(1) rhythm(1);
+}
+blockquote p,
+.blockquote {
+  color: $bentley-blue;
+  font-family: $helvetica-condensed;
+  @include adjust-font-size-to($h2-font-size);
+  line-height: rhythm(1);
+ 
+}
+
+table {
+  tbody {
+    border: none;
+  }
+  width: 100%;
+  max-width: 660px;
+  background: #f2f6f7;
+  border: none;
+  tr {
+    border-bottom: 1px solid #fff;
+  }
+  td {
+    padding: 0.5em 1em;
+    border: none;
+    vertical-align: top;
+    font-family: $helvetica-condensed;
+    color: $black;
+    font-size: 1.25em;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+tr.even { /* Some tables have rows marked even or odd. */
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
+  margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+div.status { /* Normal priority messages */
+}
+
+div.warning,
+tr.warning { /* Medium priority messages */
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error { /* High priority messages. See also the .error declaration below. */
+}
+
+.error { /* Errors that are separate from div.messages status messages. */
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning { /* Warnings that are separate from div.messages status messages. */
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+.tabs { /* See also the tabs.css file. */
+}
+
+.region-help { /* Help text on a page */
+}
+
+.more-help-link { /* Link to more help */
+}
+
+.region-content { /* Wrapper for the actual page content */
+}
+
+ul.inline { /* List of links generated by theme_links() */
+  display: inline;
+  padding: 0;
+
+  li {
+    display: inline;
+    list-style-type: none;
+    padding: 0 1em 0 0; /* LTR */
+  }
+}
+span.field-label { /* The inline field label used by the Fences module */
+  padding: 0 1em 0 0; /* LTR */
+}
+
+.item-list .pager { /* A list of page numbers when more than 1 page of content is available */
+  padding: 0;
+
+  li { /* Each page number in the pager list */
+    padding: 0 0.5em;
+  }
+}
+
+.feed-icon { /* The link to the RSS or Atom feed for the current list of content */
+}
+
+.more-link { /* Aggregator, blog, and forum more link */
+}
+
+
+/*------------------------------------------------------------------------------------
+ *                                                            Sidebars and Sub Sidebars
+ ------------------------------------------------------------------------------------*/
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+
+.region-sidebar-first {
+}
+
+body.one-sidebar.sidebar-first #main {
+  background: rgba(243, 246, 247, 1);
+  border-bottom: 1px solid #ddd;
+  #content {
+    border-left: 1px solid #ccc;
+  }
+  .region-sidebar-first {
+    background: rgba(243, 246, 247, 1);
+  }
+}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+
+.region-sidebar-second {
+}
+body.one-sidebar.sidebar-second #main{
+  background: rgba(243, 246, 247, 1);
+  border-bottom: 1px solid #ddd;
+  #content {
+    border-right: 1px solid #ccc;
+  }
+  .region-sidebar-second {
+    background: rgba(243, 246, 247, 1);
+  }
+}
+
+/*
+ * Both Sidebars!
+ */
+ body.two-sidebars #main{
+  background: rgba(243, 246, 247, 1);
+  border-bottom: 1px solid #ddd;
+  #content {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  .sidebar {
+    background: rgba(243, 246, 247, 1);
+  }
+}
+
+/*
+ * First Sub sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+
+.region-sub-sidebar-first {
+  padding-top: rhythm(1);
+}
+
+body.one-sub-sidebar.sub-sidebar-first #secondary {
+  background: rgba(243, 246, 247, 1);
+  #secondary-content {
+    border-left: 1px solid #ccc;
+  }
+  .region-sub-sidebar-first {
+    background: rgba(243, 246, 247, 1);
+  }
+}
+
+/*
+ * Second Sub sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+
+.region-sub-sidebar-second {
+  padding-top: rhythm(1);
+}
+body.one-sub-sidebar.sub-sidebar-second #secondary{
+  background: rgba(243, 246, 247, 1);
+  #secondary-content {
+    border-right: 1px solid #ccc;
+  }
+  .region-sub-sidebar-second {
+    background: rgba(243, 246, 247, 1);
+  }
+}
+
+/*
+ * Both Sub Sidebars!
+ */
+ body.two-sub-sidebars #secondary{
+  background: rgba(243, 246, 247, 1);
+  #secondary-content {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  .sub-sidebar {
+    background: rgba(243, 246, 247, 1);
+  }
+}
+
+
+/*------------------------------------------------------------------------------------
+*                                                                               Banner
+------------------------------------------------------------------------------------*/
+
+.banner.wrapper {
+  @media screen and (max-width: 50em) {
+    display: none;
+  }
+  overflow: visible;
+  min-height: 200px;
+  margin-bottom: -100px;
+}
+#banner-container {
+  background: #333;
+  padding-bottom: 93px;
+}
+#banner {
+  .block {
+    margin:0;
+  }
+  p {
+    margin: 0;
+  }
+ }
+ // If nothing in banner region
+.banner.wrapper.default {
+  overflow: visible;
+  min-height: 200px;
+  margin-bottom: -350px;
+}
+#banner-container.default {
+  background: url('../images/ideas-bg.jpg') no-repeat top center;
+  padding-bottom: 420px;
+  @media all and (max-width: 480px) {
+    padding-bottom: 350px;
+  }
+}
+
+//Slider styles
+@import "slider";
+
+
+/*------------------------------------------------------------------------------------
+*                                                                          Quick Links
+------------------------------------------------------------------------------------*/
+// Media Query agnostic styles
+.quick-links.wrapper {
+    overflow: hidden;
+}
+
+/*
+ * Use 8 grid columns for larger screens.
+ */
+$zen-column-count: 1;
+
+#quick-links {
+  padding: rhythm(1) 0 0;
+}
+
+.quick-links-left {
+  @include zen-grid-item(1, 1);
+}
+.quick-links-right {
+  @include zen-grid-item(1, 1);
+  @include zen-clear();
+}
+
+// Full width display styles
+@media all and (min-width: 960px) {
+  /*
+   * Use 8 grid columns for larger screens.
+   */
+  $zen-column-count: 8;
+  
+  #quick-links {
+    padding: rhythm(1) 0 0;
+  }
+
+  .quick-links-left {
+    @include zen-grid-item(3, 1);
+  }
+  .quick-links-right {
+    @include zen-grid-item(5, 4);
+  }
+
+}
+
+/*------------------------------------------------------------------------------------
+ *                                                                              Header
+ ------------------------------------------------------------------------------------*/
+@import "header";
+
+
+/*------------------------------------------------------------------------------------
+ *                                                               Horizontal Navigation
+ ------------------------------------------------------------------------------------*/
+
+// See navigation.scss for styles. Horizontal navs must be nice-menu blocks.
+
+.navigation.wrapper {
+    background: #000;
+    font-family: $helvetica-condensed;
+    letter-spacing: 1px;
+    font-weight: 100;
+    overflow: visible;
+    @media all and (max-width: 500px) {
+      position: absolute;
+      @include box-shadow;
+      z-index: -1;
+    }
+  }
+
+.wrapper.navigation.show {
+  z-index: 5;
+}
+
+  #navigation {
+    overflow: visible;
+    @include zen-grid-container();
+  }
+
+
+#navigation .block {
+  margin-bottom: 0;
+}
+
+#navigation .block-menu .block-title,
+#navigation .block-menu-block .block-title {
+  @include element-invisible();
+}
+
+
+/*------------------------------------------------------------------------------------
+ *                                                     (region: featured) Featured CTA 
+------------------------------------------------------------------------------------*/
+
+@import "featured";
+
+/*------------------------------------------------------------------------------------
+ *                                                                          Page Break
+------------------------------------------------------------------------------------*/
+.wrapper.page-break {
+  @media screen and (max-width: 50em) {
+    display: none;
+  }
+  #page-break {
+    background: #c7e3f3;
+    #page-break-content {
+      
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------------
+ *                                                                                Slab
+------------------------------------------------------------------------------------*/
+.wrapper.slab {
+  background: #f2f6f7;
+  border-top: 1px solid #c1c5c6;
+  #slab {
+    #slab-content {
+      padding: rhythm(1) 0;
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------------
+ *                                                                          Foundation
+------------------------------------------------------------------------------------*/
+.wrapper.foundation {
+  background: $bentley-blue;
+  border-top: 1px solid #000;
+  #foundation {
+    #foundation-content {
+      padding: rhythm(1) 0;
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------------
+ *                                                                              Footer
+------------------------------------------------------------------------------------*/
+
+@import "footer"

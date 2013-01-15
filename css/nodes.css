@@ -1,0 +1,162 @@
+@import "http://fast.fonts.com/cssapi/a58e39be-56b2-4a98-a7eb-76d2609157b4.css";
+/**
+ * @file
+ * Node Styling
+ *
+ * Style anything that isn't in the $content variable.
+ */
+/* line 11, ../sass/nodes.scss */
+.node {
+  /* Node wrapper */
+  max-width: 680px;
+  /* Responsive video default css */
+}
+/* line 14, ../sass/nodes.scss */
+.preview .node {
+  /* Preview of the content before submitting new or updated content */
+  /* background-color: #ffffea; */
+  /* Drupal core uses a #ffffea background */
+}
+/* line 18, ../sass/nodes.scss */
+.node .node-title {
+  /* Node title */
+}
+/* line 21, ../sass/nodes.scss */
+.node .user-picture {
+  /* The picture of the node author */
+}
+/* line 24, ../sass/nodes.scss */
+.node .submitted {
+  /* The "posted by" information */
+}
+/* line 27, ../sass/nodes.scss */
+.node .content {
+  /* Node's content wrapper */
+}
+/* line 30, ../sass/nodes.scss */
+.node .fluid-width-video-wrapper {
+  /* fitvids implementation (see js) */
+  max-width: 640px;
+}
+/* line 33, ../sass/nodes.scss */
+.node p.leading {
+  font-family: "PMNCaeciliaW01-45Light", Georgia, serif;
+  font-size: 1.2em;
+  line-height: 1.25em;
+}
+/* line 39, ../sass/nodes.scss */
+.node ul.links {
+  /* Node links. See also the ul.links declaration in the pages.css. */
+}
+/* line 42, ../sass/nodes.scss */
+.node ul.arrows li {
+  list-style-type: none;
+  background: url("../images/list-arrow.png") no-repeat 0px 4px;
+  padding-left: 25px;
+  margin-left: -30px;
+}
+/* line 51, ../sass/nodes.scss */
+.node video {
+  width: 100%;
+  height: auto;
+}
+/* line 55, ../sass/nodes.scss */
+.node .container {
+  width: 70%;
+  padding: 5%;
+  margin: 0px auto;
+  background: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+/* line 62, ../sass/nodes.scss */
+.node .vendor {
+  padding: 2%;
+  background: #d1eed1;
+  margin-bottom: 2em;
+}
+/* line 67, ../sass/nodes.scss */
+.node .unsupported {
+  background: #fddfde;
+}
+
+/* line 74, ../sass/nodes.scss */
+.node-poll .node-title {
+  font-family: "Helvetica W01 Light", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  text-decoration: none;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+/* line 79, ../sass/nodes.scss */
+.node-poll .node-title a {
+  color: #0075BE;
+  text-decoration: none;
+}
+@media all and (max-width: 959px) {
+  /* line 74, ../sass/nodes.scss */
+  .node-poll .node-title {
+    font-size: 1.5em;
+    line-height: 2em;
+    line-height: 1.5em;
+  }
+}
+
+/* line 90, ../sass/nodes.scss */
+.node-promoted {
+  /* A node that has been promoted to the front page */
+}
+
+/* line 93, ../sass/nodes.scss */
+.node-sticky {
+  /* A sticky node (displayed before others in a list) */
+}
+
+/* line 96, ../sass/nodes.scss */
+.node-by-viewer {
+  /* A node created by the current user */
+}
+
+/* line 99, ../sass/nodes.scss */
+.node-teaser {
+  /* A node displayed as teaser */
+}
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+/* line 108, ../sass/nodes.scss */
+.node-page {
+  /* Page content node */
+}
+
+/* line 111, ../sass/nodes.scss */
+.node-article {
+  /* Article content node */
+}
+
+/* line 114, ../sass/nodes.scss */
+.node-unpublished {
+  /* Unpublished nodes */
+  /* background-color: #fff4f4; */
+  /* Drupal core uses a #fff4f4 background */
+}
+/* line 117, ../sass/nodes.scss */
+.node-unpublished p.unpublished {
+  /* The word "Unpublished" displayed underneath the content. */
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+}
+/* line 55, /Users/paul/Sites/bentleyd7/docroot/sites/all/themes/bentley_core/sass/_custom.scss */
+.lt-ie8 .node-unpublished p.unpublished > * {
+  position: relative;
+}

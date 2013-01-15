@@ -1,0 +1,273 @@
+@import "base";
+
+// No Media Query for large displays to help IE with it's disabilities
+  /*
+   * Use 8 grid columns for larger screens.
+   */
+  $zen-column-count: 8;
+
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+
+  .sidebar-first {
+    #content { /* Span 4 columns, starting in 2nd column from left. */
+      @include zen-grid-item(6, 3);
+    }
+
+    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+      @include zen-grid-item(2, 1);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+
+  .sidebar-second {
+    #content { /* Span 4 columns, starting in 1st column from left. */
+      @include zen-grid-item(6, 1);
+    }
+
+    .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+      @include zen-grid-item(2, 7);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+
+  .two-sidebars {
+    #content { /* Span 3 columns, starting in 2nd column from left. */
+      @include zen-grid-item(4, 3);
+    }
+
+    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+      @include zen-grid-item(2, 1);
+    }
+
+    .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+      @include zen-grid-item(2, 7);
+    }
+  }
+
+  /*
+   * The layout when there is only one sub sidebar, the left one.
+   */
+
+  .sub-sidebar-first {
+    #secondary-content { /* Span 6 columns, starting in 3rd column from left. */
+      @include zen-grid-item(6, 3);
+    }
+
+    .region-sub-sidebar-first { /* Span 2 column, starting in 2st column from left. */
+      @include zen-grid-item(2, 1);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there is only one sub sidebar, the right one.
+   */
+
+  .sub-sidebar-second {
+    #secondary-content { /* Span 6 columns, starting in 1st column from left. */
+      @include zen-grid-item(6, 1);
+    }
+
+    .region-sub-sidebar-second { /* Span 2 column, starting in 7th column from left. */
+      @include zen-grid-item(2, 7);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there are two sub sidebars.
+   */
+
+  .two-sub-sidebars {
+    #secondary-content { /* Span 6 columns, starting in 3nd column from left. */
+      @include zen-grid-item(6, 3);
+    }
+
+    .region-sub-sidebar-first { /* Span 2 column, starting in 1st column from left. */
+      @include zen-grid-item(2, 1);
+      *width: auto;
+      *padding: 0;
+    }
+
+    .region-sub-sidebar-second { /* Span the bottom clear. */
+      @include zen-grid-item(6, 3);
+      @include zen-clear;
+    }
+  }
+
+
+/*
+* The foundation social block for IE
+*/
+$zen-column-count: 8;
+
+#foundation {
+  .block {
+    $zen-column-count: 8;
+    p {
+      border-right: 1px solid #007ac8;
+      text-align: center;
+      a {
+        @include opacity(0.50);
+        padding-left: rhythm(0.75);
+        padding-right: rhythm(0.75);
+        display: block;
+        border-right: 1px solid #005a9a;
+        text-decoration: none;
+        &:hover {
+          @include opacity(0.65);
+        }
+        span {
+          color: #000;
+          &.heading {
+            color: #fff;
+          }
+        }
+      }
+    }
+    &.social-facebook {
+      @include zen-grid-item(2, 1);
+      padding-right:0;
+      padding-left:0;
+      p {
+        border-left: 1px solid #005a9a;
+        a {
+          border-left: 1px solid #007ac8;
+        }
+      }
+    }
+    &.social-twitter {
+      @include zen-grid-item(2, 3);
+      padding-right:0;
+      padding-left:0;
+      }
+    &.social-youtube {
+      @include zen-grid-item(2, 5);
+      padding-right:0;
+      padding-left:0;
+    }
+    &.social-linkedin {
+      @include zen-grid-item(2, 7);
+      padding-right:0;
+      padding-left:0;
+    }
+    &.social-mail {
+      @include zen-grid-item(2, 7);
+      padding-right:0;
+      padding-left:0;
+    }
+  }
+}
+
+// IE Header
+/*
+ * Use 16 grid columns for larger screens.
+ */
+$zen-column-count: 16;
+
+#tab {
+  @include zen-nested-container();
+  @include box-shadow();
+  @include background(linear-gradient(bottom, #0079c5, #008ce3));
+  overflow: hidden;
+  border-left: 1px solid #008ace;
+  border-right: 1px solid #008ace;
+  border-bottom: 1px solid #008ace;
+  height: rhythm(2);
+
+  .lockup-container {
+    @include zen-grid-item(7, 1);
+    border-right: 1px solid #006aac;
+    height: rhythm(2);
+  }
+
+  .links-container {
+    display: block;
+    @include zen-grid-item(3, 8);
+    border-left: 1px solid #1f95d7;
+    border-right: 1px solid #006aac;
+    height: rhythm(2);
+    a#info-link,
+    a#info-link-ie {
+      font-family: $helvetica-condensed;
+      font-weight: 400;
+      color: #fff;
+      margin: rhythm(0.5) 0;
+      display: block;
+      @include hover-link();
+    }
+  }
+
+  .search-container {
+    display: block;
+    @include zen-grid-item(6, 11);
+    border-left: 1px solid #1f95d7;
+    height: rhythm(2);
+    .region-search {
+      margin: rhythm(0.5) 0 0;
+      input.form-text {
+        width: 60%;
+        background-image: none !important;
+      }
+    }
+  }
+}
+
+//subheader and secondary links
+#subheader {
+  @include zen-nested-container();
+  .subhead-container {
+    @include zen-grid-item(10, 1);
+    h1.subhead {
+      @include adjust-font-size-to($h2-font-size);
+      color: #fff;
+      margin: rhythm(0.25) 0;
+      a {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px solid $bentley-blue;
+        @include transition-property(border-color);
+        @include transition-duration(0.25s);
+        &:hover {
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+  }
+  .sub-links-container {
+    @include element-invisible-off;
+    @include zen-grid-item(6,11);
+    ul {
+      @include horizontal-list-container();
+      margin: rhythm(1) 0 0 0;
+      padding: 0;
+      li {
+        @include horizontal-list-item( 1em, right);
+        a {
+          font-family: $helvetica-condensed;
+          font-size: 1.125em;
+          font-weight: 100;
+          color:#ddd;
+          @include hover-link();
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

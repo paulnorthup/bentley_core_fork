@@ -1,0 +1,77 @@
+#featured {
+  @media all and (max-width: 500px) {
+    display: none;
+  }
+  background: #d0e3ef;
+  padding-top: rhythm(0.25);
+  padding-bottom: rhythm(0.25);
+  @include box-shadow;
+  position: relative;
+  z-index: 2;
+  p {
+    color: #333;
+    font-family: $caecilia-light;
+    &.byline {
+      @include adjust-font-size-to($h5-font-size);
+      font-family: $caecilia-light-italic;
+      color: #666;
+      @media all and (max-width: 700px) {
+        font-size: 0.85em;
+      }
+    }
+    @include adjust-font-size-to($h3-font-size);
+    @media all and (max-width: 700px) {
+      @include adjust-font-size-to($h5-font-size);
+    }
+    line-height: 1.5em;
+  }
+}
+
+/* CTAs */
+#featured {
+  .block {
+    overflow: hidden;
+  }
+  a.cta {
+    float: right;
+    clear:right;
+    color: #fff;
+    text-decoration: none;
+    background: $bentley-blue;
+    font-family: $helvetica-condensed;
+    min-width: 180px;
+    text-align: center;
+    margin: rhythm(0.5) 30px rhythm(0.5) rhythm(2);
+    padding: 15px 30px;
+    @include adjust-font-size-to($h6-font-size);
+    font-weight: 100;
+    border-bottom: 3px solid $accent-blue-navy;
+    &:hover {
+      background: $bentley-blue-hover;
+    }
+    &:active {
+      background: $bentley-blue;
+    }
+  }
+  a.cta2 {
+    float: right;
+    display: block;
+    clear: right;
+    font-size: 0.75em;
+    min-width: 220px;
+    text-align: left;
+    font-family: $helvetica;
+    margin: 0 30px rhythm(0.5) rhythm(2);
+    padding: 0;
+  }
+  p.cta2 {
+    float: right;
+    display: block;
+    clear: right;
+    color: #666;
+    font-family: $helvetica-condensed;
+    margin: 0 30px 0 0;
+    padding: 0;
+    @include adjust-font-size-to($h5-font-size);
+  }
+}

@@ -1,0 +1,625 @@
+@import "http://fast.fonts.com/cssapi/a58e39be-56b2-4a98-a7eb-76d2609157b4.css";
+/**
+ * @file
+ * Block Styling
+ */
+/*------------------------------------------------------------------------------------
+                                                                  Global block classes
+------------------------------------------------------------------------------------*/
+/* line 13, ../sass/blocks.scss */
+.recent-comments-block .views-row {
+  margin-top: 1.5em;
+}
+/* line 15, ../sass/blocks.scss */
+.recent-comments-block .views-row:first-child {
+  margin-top: 0;
+}
+
+/* line 21, ../sass/blocks.scss */
+.region.sidebar .block-title {
+  margin: 15px 0;
+}
+
+/*------------------------------------------------------------------------------------
+                                                                         Custom blocks
+------------------------------------------------------------------------------------*/
+/**
+ * Sidebar blocks
+**/
+/* line 37, ../sass/blocks.scss */
+.twitter-account h2.block-title {
+  background: url("../images/twitter-callout.png") no-repeat right center;
+  padding-right: 20px\9;
+}
+/* line 41, ../sass/blocks.scss */
+.twitter-account img {
+  margin: 0 1em 1em 0;
+}
+
+/* line 45, ../sass/blocks.scss */
+ul.tweets {
+  padding-top: 0;
+  padding-left: 0;
+  border-top: 1px solid #daddde;
+  margin-right: -30px;
+  margin-right: -10px \9;
+  /* IE8 and below */
+  margin-left: -30px;
+  margin-left: -10px \9;
+  /* IE8 and below */
+}
+/* line 53, ../sass/blocks.scss */
+ul.tweets li.tweet {
+  overflow: hidden;
+  list-style-type: none;
+  padding: 0.5em 30px;
+  border-bottom: 1px solid #daddde;
+  border-top: 1px solid white;
+}
+/* line 59, ../sass/blocks.scss */
+ul.tweets li.tweet:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+/* line 63, ../sass/blocks.scss */
+ul.tweets .twitter-action {
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+/* line 66, ../sass/blocks.scss */
+ul.tweets .twitter-action a {
+  float: left;
+  margin: 0;
+}
+
+/**
+Sidebar CTAs
+**/
+/* line 77, ../sass/blocks.scss */
+.region-sidebar-second a.cta {
+  float: right;
+  clear: right;
+  color: #fff;
+  text-decoration: none;
+  background: #0075be;
+  font-family: "Helvetica W01 Light Cn", Helvetica, Arial, sans-serif;
+  text-align: center;
+  width: 75%;
+  margin: 10px 0 30px 0;
+  margin-right: 10px\9;
+  /* IE8 and below */
+  margin-bottom: 30px\9;
+  /* IE8 and below */
+  padding: 15px 30px;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 100;
+  border-bottom: 3px solid #00599b;
+}
+/* line 93, ../sass/blocks.scss */
+.region-sidebar-second a.cta:hover {
+  background: #00539c;
+}
+
+/**
+ * Foundation blocks (primarily social sharing)
+**/
+/* line 106, ../sass/blocks.scss */
+#foundation .block p {
+  border-right: 1px solid #007ac8;
+  text-align: center;
+}
+/* line 109, ../sass/blocks.scss */
+#foundation .block p a {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+  opacity: 0.75;
+  padding-left: 1.125em;
+  padding-right: 1.125em;
+  display: block;
+  text-decoration: none;
+}
+@media all and (max-width: 500px) {
+  /* line 109, ../sass/blocks.scss */
+  #foundation .block p a {
+    border-right: 1px solid #005a9a;
+  }
+}
+/* line 118, ../sass/blocks.scss */
+#foundation .block p a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 121, ../sass/blocks.scss */
+#foundation .block p a span {
+  color: #000;
+}
+/* line 123, ../sass/blocks.scss */
+#foundation .block p a span.heading {
+  color: #fff;
+}
+/* line 129, ../sass/blocks.scss */
+#foundation .block:nth-child(1) {
+  float: left;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: -25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 133, ../sass/blocks.scss */
+#foundation .block:nth-child(1) p {
+  border-left: 1px solid #005a9a;
+}
+/* line 135, ../sass/blocks.scss */
+#foundation .block:nth-child(1) p a {
+  border-left: 1px solid #007ac8;
+}
+/* line 140, ../sass/blocks.scss */
+#foundation .block:nth-child(2) {
+  float: left;
+  width: 25%;
+  margin-left: 25%;
+  margin-right: -50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 144, ../sass/blocks.scss */
+#foundation .block:nth-child(2) p {
+  border-left: 1px solid #005a9a;
+}
+/* line 148, ../sass/blocks.scss */
+#foundation .block:nth-child(3) {
+  float: left;
+  width: 25%;
+  margin-left: 50%;
+  margin-right: -75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 152, ../sass/blocks.scss */
+#foundation .block:nth-child(3) p {
+  border-left: 1px solid #005a9a;
+}
+/* line 156, ../sass/blocks.scss */
+#foundation .block:nth-child(4) {
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 160, ../sass/blocks.scss */
+#foundation .block:nth-child(4) p {
+  border-left: 1px solid #005a9a;
+}
+
+@media screen and (max-width: 40em) {
+  /* line 170, ../sass/blocks.scss */
+  #foundation .block:nth-child(1) {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+    clear: left;
+  }
+  /* line 174, ../sass/blocks.scss */
+  #foundation .block:nth-child(2) {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+    clear: left;
+  }
+  /* line 178, ../sass/blocks.scss */
+  #foundation .block:nth-child(3) {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+    clear: left;
+  }
+  /* line 182, ../sass/blocks.scss */
+  #foundation .block:nth-child(4) {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+    clear: left;
+  }
+}
+/* line 194, ../sass/blocks.scss */
+#foundation .block.social-facebook p a {
+  background: url("../images/social/facebook.png") no-repeat top center;
+  padding-top: 90px;
+}
+/* line 200, ../sass/blocks.scss */
+#foundation .block.social-twitter p a {
+  background: url("../images/social/twitter.png") no-repeat top center;
+  padding-top: 90px;
+}
+/* line 206, ../sass/blocks.scss */
+#foundation .block.social-youtube p a {
+  background: url("../images/social/youtube.png") no-repeat top center;
+  padding-top: 90px;
+}
+/* line 212, ../sass/blocks.scss */
+#foundation .block.social-mail p a {
+  background: url("../images/social/mail.png") no-repeat top center;
+  padding-top: 90px;
+}
+/* line 218, ../sass/blocks.scss */
+#foundation .block.social-linkedin p a {
+  background: url("../images/social/linkedin.png") no-repeat top center;
+  padding-top: 90px;
+}
+/* line 224, ../sass/blocks.scss */
+#foundation .block.social-subscribe p a {
+  background: url("../images/social/subscribe.png") no-repeat top center;
+  padding-top: 90px;
+}
+
+/**
+ * IDEAS NODE DATA
+ * a block showing related data in the sidebar of ideas articles
+ * driven by a view with attachment
+**/
+/* line 242, ../sass/blocks.scss */
+.ideas-node-data .view-content .views-field {
+  margin: 0 0 0.375em;
+  padding: 0.75em 0 0.375em;
+  border-bottom: 1px solid #ddd;
+}
+/* line 247, ../sass/blocks.scss */
+.ideas-node-data .view-content .views-label {
+  font-family: "Helvetica W01 Light", Helvetica, Arial, sans-serif;
+  font-size: 1.125em;
+  color: #000;
+}
+/* line 252, ../sass/blocks.scss */
+.ideas-node-data .view-content .field-content {
+  font-size: 0.875em;
+}
+/* line 254, ../sass/blocks.scss */
+.ideas-node-data .view-content .field-content p {
+  margin: 0;
+}
+/* line 257, ../sass/blocks.scss */
+.ideas-node-data .view-content .field-content a {
+  text-decoration: none;
+}
+/* line 259, ../sass/blocks.scss */
+.ideas-node-data .view-content .field-content a:hover {
+  text-decoration: underline;
+}
+
+/* line 266, ../sass/blocks.scss */
+.ideas-node-data .attachment .views-field {
+  margin: 0 0 0.375em;
+  padding: 0;
+  border-bottom: none;
+}
+/* line 271, ../sass/blocks.scss */
+.ideas-node-data .attachment ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 11, /Users/kellyleblanc/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scss */
+.ideas-node-data .attachment ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+/* line 274, ../sass/blocks.scss */
+.ideas-node-data .attachment ul li {
+  margin: 0 0 1.125em;
+}
+/* line 276, ../sass/blocks.scss */
+.ideas-node-data .attachment ul li a {
+  font-family: "Helvetica W01 Light", Helvetica, Arial, sans-serif;
+  padding-bottom: 0.375em;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #222;
+  border-bottom: 1px solid #ddd;
+  -webkit-transition-property: border;
+  -moz-transition-property: border;
+  -o-transition-property: border;
+  transition-property: border;
+  display: block;
+}
+/* line 285, ../sass/blocks.scss */
+.ideas-node-data .attachment ul li a:hover {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+/* line 295, ../sass/blocks.scss */
+.ideas-node-data .attachment ul.share li a.print {
+  background: url("../images/print.png") no-repeat right center;
+}
+/* line 298, ../sass/blocks.scss */
+.ideas-node-data .attachment ul.share li a.mail {
+  background: url("../images/mail.png") no-repeat right center;
+}
+/* line 301, ../sass/blocks.scss */
+.ideas-node-data .attachment ul.share li a.twitter {
+  background: url("../images/twitter.png") no-repeat right center;
+}
+/* line 304, ../sass/blocks.scss */
+.ideas-node-data .attachment ul.share li a:hover {
+  text-decoration: none;
+}
+
+/*------------------------------------------------------------------------------------
+                                                                        Default blocks
+------------------------------------------------------------------------------------*/
+/* line 314, ../sass/blocks.scss */
+.block {
+  /* Block wrapper */
+  margin-bottom: 1.5em;
+}
+/* line 317, ../sass/blocks.scss */
+.block.first {
+  /* The first block in the region */
+}
+/* line 320, ../sass/blocks.scss */
+.block.last {
+  /* The last block in the region */
+}
+/* line 323, ../sass/blocks.scss */
+.block.odd {
+  /* Zebra striping for each block in the region */
+}
+/* line 326, ../sass/blocks.scss */
+.block.even {
+  /* Zebra striping for each block in the region */
+}
+/* line 329, ../sass/blocks.scss */
+.block h2.block-title {
+  /* Block title */
+}
+
+/* Styling for Polls */
+/* line 335, ../sass/blocks.scss */
+.poll .vote-form .choices {
+  margin: 0;
+  width: 100%;
+}
+
+/* line 339, ../sass/blocks.scss */
+.poll .vote-form .form-submit {
+  float: left;
+}
+
+/* line 342, ../sass/blocks.scss */
+.block-poll .poll .vote-form .choices .title {
+  font-family: "Helvetica W01 Light", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  color: #000;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+@media all and (max-width: 959px) {
+  /* line 342, ../sass/blocks.scss */
+  .block-poll .poll .vote-form .choices .title {
+    font-size: 1.5em;
+    line-height: 2em;
+    line-height: 1.5em;
+  }
+}
+
+/* line 353, ../sass/blocks.scss */
+input[type="radio"] {
+  height: 25px;
+  width: 25px;
+}
+
+/* Styling Comments */
+/* line 362, ../sass/blocks.scss */
+.comments h2.title {
+  font-family: "Helvetica W01 Light Cn", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: #0075be;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  line-height: 1em;
+}
+
+/* line 371, ../sass/blocks.scss */
+#block-aggregator-category-1 {
+  /* Block for the latest news items in the first category */
+}
+
+/* line 374, ../sass/blocks.scss */
+#block-aggregator-feed-1 {
+  /* Block for the latest news items in the first feed */
+}
+
+/* line 377, ../sass/blocks.scss */
+#block-block-1 {
+  /* First block created with "Add block" link */
+}
+
+/* line 380, ../sass/blocks.scss */
+#block-blog-recent {
+  /* "Recent blog posts" block */
+}
+
+/* line 383, ../sass/blocks.scss */
+#block-book-navigation {
+  /* "Book navigation" block for the current book's table of contents */
+}
+
+/* line 386, ../sass/blocks.scss */
+#block-comment-recent {
+  /* "Recent comments" block */
+}
+
+/* line 389, ../sass/blocks.scss */
+#block-forum-active {
+  /* "Active forum topics" block */
+}
+
+/* line 392, ../sass/blocks.scss */
+#block-forum-new {
+  /* "New forum topics" block */
+}
+
+/* line 395, ../sass/blocks.scss */
+#block-locale-language {
+  /* Language switcher block */
+}
+
+/* line 398, ../sass/blocks.scss */
+#block-menu-menu-NAME {
+  /* Custom menu block */
+}
+
+/* line 401, ../sass/blocks.scss */
+#block-node-recent {
+  /* "Recent content" block */
+}
+
+/* line 404, ../sass/blocks.scss */
+#block-node-syndicate {
+  /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */
+}
+
+/* line 407, ../sass/blocks.scss */
+#block-poll-recent {
+  /* "Most recent poll" block */
+}
+
+/* line 410, ../sass/blocks.scss */
+#block-profile-author-information {
+  /* "Author information" block for the profile of the page's author */
+}
+
+/* line 413, ../sass/blocks.scss */
+#block-search-form {
+  /* "Search form" block */
+}
+
+/* line 416, ../sass/blocks.scss */
+#block-shortcut-shortcuts {
+  /* "Shortcuts" block */
+}
+
+/* line 419, ../sass/blocks.scss */
+#block-statistics-popular {
+  /* "Popular content" block */
+}
+
+/* line 422, ../sass/blocks.scss */
+#block-system-main-menu {
+  /* "Main menu" block */
+}
+
+/* line 425, ../sass/blocks.scss */
+#block-system-management {
+  /* "Management" block for Drupal management menu */
+}
+
+/* line 428, ../sass/blocks.scss */
+#block-system-navigation {
+  /* "Navigation" block for Drupal navigation menu */
+}
+
+/* line 431, ../sass/blocks.scss */
+#block-system-user-menu {
+  /* "User menu" block for Drupal user menu */
+}
+
+/* line 434, ../sass/blocks.scss */
+#block-system-help {
+  /* "System help" block */
+}
+
+/* line 437, ../sass/blocks.scss */
+#block-system-main {
+  /* "Main page content" block */
+}
+
+/* line 440, ../sass/blocks.scss */
+#block-system-powered-by {
+  /* "Powered by Drupal" block */
+}
+
+/* line 443, ../sass/blocks.scss */
+#block-user-login {
+  /* "User login form" block */
+}
+
+/* line 446, ../sass/blocks.scss */
+#block-user-new {
+  /* "Who's new" block for a list of the newest users */
+}
+
+/* line 449, ../sass/blocks.scss */
+#block-user-online {
+  /* "Who's online" block for a list of the online users */
+}

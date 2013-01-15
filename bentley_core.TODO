@@ -1,0 +1,19 @@
+These are things that need to be done to make this theme badass(er):
+
+  General:
+  ☐ Break apart theme into bentley_core and further subthemes for specific sites
+    ☐ Add theme specific css for subthemes
+  ---- ✄ -----------------------
+  ☐ Figure out how to do default block positioning in themes
+  ☐ Change all colors to variables (grey, white, black, etc)
+
+  SASS:
+ ☐ Get ruby running on acquia for live sass compilation (no more tracking CSS!)
+
+  Refactoring:
+  ☐ line 19 ideas/_blocks.scss refactor into bentley core for ie compatability (view sidebar p width issue) git:c581545
+  
+
+  Javascript:
+  ☐ Include jquery.fitvids.js only on pages that have embeded videos
+    (php preprocess check for video, drupal_add_js fitvids)

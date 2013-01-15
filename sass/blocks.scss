@@ -1,0 +1,450 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+@import "base";
+
+/*------------------------------------------------------------------------------------
+                                                                  Global block classes
+------------------------------------------------------------------------------------*/
+
+.recent-comments-block {
+  .views-row { 
+    margin-top: rhythm(1);
+    &:first-child {
+      margin-top:0;
+    }
+  }
+}
+.region.sidebar {
+  .block-title {
+    margin: 15px 0;
+  }
+}
+
+/*------------------------------------------------------------------------------------
+                                                                         Custom blocks
+------------------------------------------------------------------------------------*/
+
+
+/**
+ * Sidebar blocks
+**/
+
+// Official Social feed block (see uga)
+.twitter-account {
+  h2.block-title {
+    background: url('../images/twitter-callout.png') no-repeat right center;
+    padding-right: 20px\9;
+  }
+  img {
+    margin: 0 1em 1em 0;
+  }
+}
+ul.tweets {
+  padding-top: 0;
+  padding-left: 0;
+  border-top: 1px solid $accent-grey;
+  margin-right: -30px;
+  margin-right: -10px\9; /* IE8 and below */
+  margin-left: -30px;
+  margin-left: -10px\9; /* IE8 and below */
+  li.tweet {
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0.5em 30px;
+    border-bottom: 1px solid $accent-grey;
+    border-top: 1px solid $white;
+    &:hover {
+      background: rgba(255, 255, 255, 0.75);
+    }
+  }
+  .twitter-action {
+    overflow: hidden;
+    margin-bottom: 1em;
+    a {
+      float: left;
+      margin: 0;
+    }
+  }
+
+}
+/**
+Sidebar CTAs
+**/
+.region-sidebar-second {
+  a.cta {
+    float: right;
+    clear:right;
+    color: #fff;
+    text-decoration: none;
+    background: $bentley-blue;
+    font-family: $helvetica-condensed;
+    text-align: center;
+    width: 75%;
+    margin: 10px 0 30px 0;
+    margin-right: 10px\9; /* IE8 and below */
+    margin-bottom: 30px\9; /* IE8 and below */
+    padding: 15px 30px;
+    @include adjust-font-size-to($h5-font-size);
+    font-weight: 100;
+    border-bottom: 3px solid $accent-blue-navy;
+    &:hover {
+      background: $bentley-blue-hover;
+    }
+  }
+}
+
+/**
+ * Foundation blocks (primarily social sharing)
+**/
+
+#foundation {
+  .block {
+    $zen-column-count: 8;
+    p {
+      border-right: 1px solid #007ac8;
+      text-align: center;
+      a {
+        @include opacity(0.75);
+        padding-left: rhythm(0.75);
+        padding-right: rhythm(0.75);
+        display: block;
+        text-decoration: none;
+        @media all and (max-width: 500px) {
+          border-right: 1px solid #005a9a;
+        }
+        &:hover {
+          @include opacity(1.0);
+        }
+        span {
+          color: #000;
+          &.heading {
+            color: #fff;
+          }
+        }
+      }
+    }
+    &:nth-child(1) {
+      @include zen-grid-item(2, 1);
+      padding-right:0;
+      padding-left:0;
+      p {
+        border-left: 1px solid #005a9a;
+        a {
+          border-left: 1px solid #007ac8;
+        }
+      }
+    }
+    &:nth-child(2) {
+      @include zen-grid-item(2, 3);
+      padding-right:0;
+      padding-left:0;
+      p {
+        border-left: 1px solid #005a9a;
+      }
+    }
+    &:nth-child(3) {
+      @include zen-grid-item(2, 5);
+      padding-right:0;
+      padding-left:0;
+      p {
+          border-left: 1px solid #005a9a;
+        }  
+    }
+    &:nth-child(4) {
+      @include zen-grid-item(2, 7);
+      padding-right:0;
+      padding-left:0;
+      p {
+          border-left: 1px solid #005a9a;
+        }
+    }
+  }
+}
+@media screen and (max-width:40em) {
+  #foundation {
+    .block {
+      $zen-column-count: 1;
+      &:nth-child(1) {
+        @include zen-grid-item(1, 1);
+        @include zen-clear;
+      }
+      &:nth-child(2) {
+        @include zen-grid-item(1, 1);
+        @include zen-clear;
+        }
+      &:nth-child(3) {
+        @include zen-grid-item(1, 1);
+        @include zen-clear;
+      }
+      &:nth-child(4) {
+        @include zen-grid-item(1, 1);
+        @include zen-clear;
+      }
+    }
+  }
+}
+
+// Social icons for
+#foundation {
+  .block {
+    &.social-facebook {
+      p a {
+        background: url('../images/social/facebook.png') no-repeat top center;
+        padding-top: 90px;
+      }
+    }
+    &.social-twitter {
+      p a {
+        background: url('../images/social/twitter.png') no-repeat top center;
+        padding-top: 90px;
+      }
+    }
+    &.social-youtube {
+      p a {
+        background: url('../images/social/youtube.png') no-repeat top center;
+        padding-top: 90px;
+      }
+    }
+     &.social-mail {
+      p a {
+        background: url('../images/social/mail.png') no-repeat top center;
+        padding-top: 90px;
+      }
+    }
+    &.social-linkedin {
+      p a {
+        background: url('../images/social/linkedin.png') no-repeat top center;
+        padding-top: 90px;
+      }
+    }
+     &.social-subscribe {
+      p a {
+        background: url('../images/social/subscribe.png') no-repeat top center;
+        padding-top: 90px;
+      }
+    }
+  } 
+}
+
+
+
+/**
+ * IDEAS NODE DATA
+ * a block showing related data in the sidebar of ideas articles
+ * driven by a view with attachment
+**/
+
+.ideas-node-data { }
+.ideas-node-data .view-content {
+  .views-field {
+    margin: 0 0 rhythm(0.25);
+    padding: rhythm(0.5) 0 rhythm(0.25);
+    border-bottom: 1px solid #ddd;
+  }
+  .views-label {
+    font-family: $helvetica-light;
+    font-size: 1.125em;
+    color: #000;
+  }
+  .field-content {
+    font-size: 0.875em;
+    p {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.ideas-node-data .attachment {
+  .views-field {
+      margin: 0 0 rhythm(0.25);
+      padding: 0;
+      border-bottom: none;
+    }
+   ul {
+    @include no-bullets();
+    padding:0;
+    li {
+      margin: 0 0 rhythm(0.75);
+      a {
+        font-family: $helvetica-light;
+        padding-bottom: rhythm(0.25);
+        font-size: 1.5em;
+        text-decoration: none;
+        color: #222;
+        border-bottom: 1px solid #ddd;
+        @include transition-property(border);
+        display: block;
+        &:hover {
+          color: #000;
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+  }
+}
+.ideas-node-data .attachment ul.share {
+  li {
+    a.print {
+      background: url('../images/print.png') no-repeat right center;
+    }
+    a.mail {
+      background: url('../images/mail.png') no-repeat right center;
+    }
+    a.twitter {
+      background: url('../images/twitter.png') no-repeat right center;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------------
+                                                                        Default blocks
+------------------------------------------------------------------------------------*/
+
+.block { /* Block wrapper */
+  margin-bottom: 1.5em;
+
+  &.first { /* The first block in the region */
+  }
+
+  &.last { /* The last block in the region */
+  }
+
+  &.odd { /* Zebra striping for each block in the region */
+  }
+
+  &.even { /* Zebra striping for each block in the region */
+  }
+
+  h2.block-title { /* Block title */
+  }
+}
+
+/* Styling for Polls */
+
+.poll .vote-form .choices {
+  margin: 0;
+  width: 100%;
+}
+.poll .vote-form .form-submit {
+  float: left;
+}
+.block-poll .poll .vote-form .choices .title {
+  font-family: $helvetica-light;
+  font-weight: 200;
+  color: #000;
+  @include adjust-font-size-to($h1-font-size);
+  
+  @media all and (max-width: 959px) {
+    @include adjust-font-size-to($h2-font-size);
+    line-height: 1.5em;
+  }
+}
+input[type="radio"] {
+  height: 25px;
+  width: 25px;
+}
+
+
+
+/* Styling Comments */
+.comments {
+  h2.title {
+    font-family: $helvetica-condensed;
+    font-weight: 100;
+    color: $bentley-blue;
+    @include adjust-font-size-to($h3-font-size);
+    line-height: 1em;
+  }
+}
+
+#block-aggregator-category-1 { /* Block for the latest news items in the first category */
+}
+
+#block-aggregator-feed-1 { /* Block for the latest news items in the first feed */
+}
+
+#block-block-1 { /* First block created with "Add block" link */
+}
+
+#block-blog-recent { /* "Recent blog posts" block */
+}
+
+#block-book-navigation { /* "Book navigation" block for the current book's table of contents */
+}
+
+#block-comment-recent { /* "Recent comments" block */
+}
+
+#block-forum-active { /* "Active forum topics" block */
+}
+
+#block-forum-new { /* "New forum topics" block */
+}
+
+#block-locale-language { /* Language switcher block */
+}
+
+#block-menu-menu-NAME { /* Custom menu block */
+}
+
+#block-node-recent { /* "Recent content" block */
+}
+
+#block-node-syndicate { /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */
+}
+
+#block-poll-recent { /* "Most recent poll" block */
+}
+
+#block-profile-author-information { /* "Author information" block for the profile of the page's author */
+}
+
+#block-search-form { /* "Search form" block */
+}
+
+#block-shortcut-shortcuts { /* "Shortcuts" block */
+}
+
+#block-statistics-popular { /* "Popular content" block */
+}
+
+#block-system-main-menu { /* "Main menu" block */
+}
+
+#block-system-management { /* "Management" block for Drupal management menu */
+}
+
+#block-system-navigation { /* "Navigation" block for Drupal navigation menu */
+}
+
+#block-system-user-menu { /* "User menu" block for Drupal user menu */
+}
+
+#block-system-help { /* "System help" block */
+}
+
+#block-system-main { /* "Main page content" block */
+}
+
+#block-system-powered-by { /* "Powered by Drupal" block */
+}
+
+#block-user-login { /* "User login form" block */
+}
+
+#block-user-new { /* "Who's new" block for a list of the newest users */
+}
+
+#block-user-online { /* "Who's online" block for a list of the online users */
+}

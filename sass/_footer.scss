@@ -1,0 +1,83 @@
+/*------------------------------------------------------------------------------------
+ *                                                                              Footer
+------------------------------------------------------------------------------------*/
+.wrapper.footer {
+    background: #000;
+    border-top: 4px solid $bentley-blue;
+  }
+  #footer {
+    color: #888;
+    padding-top: rhythm(1);
+    text-align: center;
+  }
+  #footer .block {
+    background: url('../images/large-shield.png') no-repeat top center;
+    padding-top: 96px;
+    overflow: hidden;
+  }
+  #footer h1.logo {
+    color: #fff;
+    margin-top: 4px;
+  }
+  #footer p {
+    font-size: 0.75em;
+    line-height: rhythm(1);
+    margin-bottom: rhythm(1);
+    text-transform: uppercase;
+  }
+  #footer ul.footer-menu {
+    @include horizontal-list-container();
+    display: inline-block;
+    border-top: 1px solid #666;
+  }
+  #footer ul.footer-menu li {
+    @include horizontal-list-item();
+  }
+  #footer ul.footer-menu li a {
+    color: #fff;
+    font-size: 0.75em;
+    @include hover-link();
+  }
+
+@media all and (min-width: 50em) {
+
+  .wrapper.footer {
+    background: #000;
+    border-top: 4px solid $bentley-blue;
+  }
+  #footer {
+    color: #888;
+    padding-top: rhythm(1);
+    text-align: left;
+  }
+  #footer .block {
+    background: url('../images/large-shield.png') no-repeat left top;
+    padding: 0 0 0 87px;
+    overflow: hidden;
+  }
+  #footer h1.logo {
+    color: #fff;
+    margin-top: 4px;
+  }
+  #footer p {
+    font-size: 0.75em;
+    line-height: rhythm(1);
+    margin-bottom: rhythm(1);
+    text-transform: uppercase;
+  }
+  #footer ul.footer-menu {
+    @include horizontal-list-container();
+    display: inline-block;
+    border-top: 1px solid #666;
+  }
+  #footer ul.footer-menu li {
+    @include horizontal-list-item();
+    padding-right: rhythm(2);
+  }
+  #footer ul.footer-menu li a {
+    color: #fff;
+    font-size: 0.75em;
+    @include hover-link();
+  }
+
+}

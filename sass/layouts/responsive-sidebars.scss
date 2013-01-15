@@ -1,0 +1,465 @@
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+@import "base";
+
+
+$zen-column-count:  8;
+$zen-gutter-width:  60px;
+$zen-grid-width: 100%;
+
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
+// - Drop support for IE 6/7. :-) In the _base.scss, set $legacy-support-for-ie6
+//   and $legacy-support-for-ie7 to false.
+// - (Preferred) Install the box-sizing polyfill and set the variable below to
+//   the absolute path URL to the boxsizing.htc file.
+//   @see https://github.com/Schepp/box-sizing-polyfill
+//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+// - Use the same CSS unit for grid width and gutter width (use px for both or
+//   use % for both, etc.) and set the box-sizing variable to content-box.
+//   $zen-box-sizing: content-box;
+
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+/*
+ * Set full width wrappers for backgrounds
+ */
+
+.wrapper {
+  width: 100%;
+}
+
+/*
+ * Center the page elements.
+ */
+
+#header,
+#quick-links,
+#navigation,
+#banner,
+#main,
+#secondary,
+#page-break,
+#slab,
+#foundation,
+#footer {
+  /* For screen sizes larger than 1200px, prevent excessively long lines of text
+     by setting a max-width. */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+// See the note about $zen-auto-include-item-base above.
+
+#quick-links,
+#subheader,
+#featured,
+#content,
+#page-break-content,
+#secondary-content,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-sub-sidebar-first,
+.region-sub-sidebar-second,
+#slab-content,
+#foundation-content {
+  @include zen-grid-item-base();
+}
+
+/*
+ * Containers for grid items and flow items.
+ */
+
+#header,
+#quick-links,
+#navigation,
+#banner,
+#main,
+#page-break,
+#secondary,
+#slab,
+#foundation,
+#footer {
+  @include zen-grid-container();
+}
+
+/*
+ * Sidebars
+ */
+
+
+@media all and (min-width: 45em) and (max-width: 60em) {
+  /*
+   * Use 8 grid columns.
+   */
+  $zen-column-count: 8;
+
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+
+  .sidebar-first {
+    #content { /* Span 6 columns, starting in 3rd column from left. */
+      @include zen-grid-item(6, 3);
+    }
+
+    .region-sidebar-first { /* Span 2 column, starting in 2st column from left. */
+      @include zen-grid-item(2, 1);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+
+  .sidebar-second {
+    #content { /* Span 6 columns, starting in 1st column from left. */
+      @include zen-grid-item(6, 1);
+    }
+
+    .region-sidebar-second { /* Span 2 column, starting in 7th column from left. */
+      @include zen-grid-item(2, 7);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+
+  .two-sidebars {
+    #content { /* Span 6 columns, starting in 3nd column from left. */
+      @include zen-grid-item(6, 3);
+    }
+
+    .region-sidebar-first { /* Span 2 column, starting in 1st column from left. */
+      @include zen-grid-item(2, 1);
+      *width: auto;
+      *padding: 0;
+    }
+
+    .region-sidebar-second { /* Span the bottom clear. */
+      @include zen-grid-item(6, 3);
+      @include zen-clear;
+    }
+  }
+}
+@media all and (min-width: 60em) and (max-width: 75em) {
+  /*
+   * Use 16 grid columns for largest screens.
+   */
+  $zen-column-count: 16;
+
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+
+  .sidebar-first {
+    #content { /* Span 6 columns, starting in 3rd column from left. */
+      @include zen-grid-item(12, 5);
+    }
+
+    .region-sidebar-first { /* Span 2 column, starting in 2st column from left. */
+      @include zen-grid-item(4, 1);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+
+  .sidebar-second {
+    #content { /* Span 6 columns, starting in 1st column from left. */
+      @include zen-grid-item(12, 1);
+    }
+
+    .region-sidebar-second { /* Span 2 column, starting in 7th column from left. */
+      @include zen-grid-item(4, 13);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+
+  .two-sidebars {
+    #content { /* Span 6 columns, starting in 3nd column from left. */
+      @include zen-grid-item(8, 5);
+    }
+
+    .region-sidebar-first { /* Span 2 column, starting in 1st column from left. */
+      @include zen-grid-item(4, 1);
+      *width: auto;
+      *padding: 0;
+    }
+
+    .region-sidebar-second { /* Span the bottom clear. */
+      @include zen-grid-item(4, 13);
+    }
+  }
+}
+
+@media all and (min-width:75em) {
+  /*
+   * Use 16 grid columns for largest screens.
+   */
+  $zen-column-count: 16;
+
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+
+  .sidebar-first {
+    #content { /* Span 12 columns, starting in 5th column from left. */
+      @include zen-grid-item(12, 5);
+    }
+
+    .region-sidebar-first { /* Span 2 column, starting in 2st column from left. */
+      @include zen-grid-item(4, 1);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+
+  .sidebar-second {
+    #content { /* Span 6 columns, starting in 1st column from left. */
+      @include zen-grid-item(12, 1);
+    }
+
+    .region-sidebar-second { /* Span 2 column, starting in 7th column from left. */
+      @include zen-grid-item(4, 13);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+
+  .two-sidebars {
+    #content { /* Span 6 columns, starting in 3nd column from left. */
+      @include zen-grid-item(8, 5);
+    }
+
+    .region-sidebar-first { /* Span 2 column, starting in 1st column from left. */
+      @include zen-grid-item(4, 1);
+      *width: auto;
+      *padding: 0;
+    }
+
+    .region-sidebar-second { /* Span the bottom clear. */
+      @include zen-grid-item(4, 13);
+    }
+  }
+}
+
+/*
+ * Sub Sidebars
+ */
+
+
+@media all and (min-width: 45em) and (max-width: 60em) {
+  /*
+   * Use 8 grid columns for larger screens.
+   */
+  $zen-column-count: 8;
+
+  /*
+   * The layout when there is only one sub sidebar, the left one.
+   */
+
+  .sub-sidebar-first {
+    #secondary-content { /* Span 6 columns, starting in 3rd column from left. */
+      @include zen-grid-item(6, 3);
+    }
+
+    .region-sub-sidebar-first { /* Span 2 column, starting in 2st column from left. */
+      @include zen-grid-item(2, 1);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there is only one sub sidebar, the right one.
+   */
+
+  .sub-sidebar-second {
+    #secondary-content { /* Span 6 columns, starting in 1st column from left. */
+      @include zen-grid-item(6, 1);
+    }
+
+    .region-sub-sidebar-second { /* Span 2 column, starting in 7th column from left. */
+      @include zen-grid-item(2, 7);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there are two sub sidebars.
+   */
+
+  .two-sub-sidebars {
+    #secondary-content { /* Span 6 columns, starting in 3nd column from left. */
+      @include zen-grid-item(6, 3);
+    }
+
+    .region-sub-sidebar-first { /* Span 2 column, starting in 1st column from left. */
+      @include zen-grid-item(2, 1);
+      *width: auto;
+      *padding: 0;
+    }
+
+    .region-sub-sidebar-second { /* Span the bottom clear. */
+      @include zen-grid-item(6, 3);
+      @include zen-clear;
+    }
+  }
+}
+@media all and (min-width: 60em) and (max-width: 75em) {
+  /*
+   * Use 16 grid columns for largest screens.
+   */
+  $zen-column-count: 16;
+
+  /*
+   * The layout when there is only one sub sidebar, the left one.
+   */
+
+  .sub-sidebar-first {
+    #secondary-content { /* Span 6 columns, starting in 3rd column from left. */
+      @include zen-grid-item(12, 5);
+    }
+
+    .region-sub-sidebar-first { /* Span 2 column, starting in 2st column from left. */
+      @include zen-grid-item(4, 1);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there is only one sub sidebar, the right one.
+   */
+
+  .sub-sidebar-second {
+    #secondary-content { /* Span 6 columns, starting in 1st column from left. */
+      @include zen-grid-item(12, 1);
+    }
+
+    .region-sub-sidebar-second { /* Span 2 column, starting in 7th column from left. */
+      @include zen-grid-item(4, 13);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there are two sub sidebars.
+   */
+
+  .two-sub-sidebars {
+    #secondary-content { /* Span 6 columns, starting in 3nd column from left. */
+      @include zen-grid-item(8, 5);
+    }
+
+    .region-sub-sidebar-first { /* Span 2 column, starting in 1st column from left. */
+      @include zen-grid-item(4, 1);
+      *width: auto;
+      *padding: 0;
+    }
+
+    .region-sub-sidebar-second { /* Span the bottom clear. */
+      @include zen-grid-item(4, 13);
+    }
+  }
+}
+
+@media all and (min-width:75em) {
+  /*
+   * Use 16 grid columns for largest screens.
+   */
+  $zen-column-count: 16;
+
+  /*
+   * The layout when there is only one sub sidebar, the left one.
+   */
+
+  .sub-sidebar-first {
+    #secondary-content { /* Span 6 columns, starting in 3rd column from left. */
+      @include zen-grid-item(12, 5);
+    }
+
+    .region-sub-sidebar-first { /* Span 2 column, starting in 2st column from left. */
+      @include zen-grid-item(4, 1);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there is only one sub sidebar, the right one.
+   */
+
+  .sub-sidebar-second {
+    #secondary-content { /* Span 6 columns, starting in 1st column from left. */
+      @include zen-grid-item(12, 1);
+    }
+
+    .region-sub-sidebar-second { /* Span 2 column, starting in 7th column from left. */
+      @include zen-grid-item(4, 13);
+      *width: auto;
+      *padding: 0;
+    }
+  }
+
+  /*
+   * The layout when there are two sub sidebars.
+   */
+
+  .two-sub-sidebars {
+    #secondary-content { /* Span 6 columns, starting in 3nd column from left. */
+      @include zen-grid-item(8, 5);
+    }
+
+    .region-sub-sidebar-first { /* Span 2 column, starting in 1st column from left. */
+      @include zen-grid-item(4, 1);
+      *width: auto;
+      *padding: 0;
+    }
+
+    .region-sub-sidebar-second { /* Span the bottom clear. */
+      @include zen-grid-item(4, 13);
+    }
+  }
+}
+

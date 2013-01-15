@@ -1,0 +1,120 @@
+/**
+ * @file
+ * Node Styling
+ *
+ * Style anything that isn't in the $content variable.
+ */
+
+@import "base";
+
+
+.node { /* Node wrapper */
+  max-width: 680px;
+
+  .preview & { /* Preview of the content before submitting new or updated content */
+    /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
+  }
+
+  .node-title { /* Node title */
+  }
+
+  .user-picture { /* The picture of the node author */
+  }
+
+  .submitted { /* The "posted by" information */
+  }
+
+  .content { /* Node's content wrapper */
+  }
+
+  .fluid-width-video-wrapper { /* fitvids implementation (see js) */
+    max-width: 640px;
+  }
+  p.leading {
+    font-family: $caecilia-light;
+    font-size: 1.2em;
+    line-height: 1.25em;
+  }
+
+  ul.links { /* Node links. See also the ul.links declaration in the pages.css. */
+  }
+  ul.arrows {
+    li {
+      list-style-type: none;
+      background: url('../images/list-arrow.png') no-repeat 0px 4px;
+      padding-left: 25px;
+      margin-left: -30px;
+    }
+  }
+
+  /* Responsive video default css */
+  video {
+    width: 100%;
+    height: auto;
+  }  
+  .container {
+    width: 70%;
+    padding: 5%;
+    margin:0px auto;
+    background:#fff;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  }  
+  .vendor {
+    padding: 2%;
+    background: #d1eed1;
+    margin-bottom: 2em;
+  }  
+  .unsupported {
+    background: #fddfde;
+  }
+  
+}
+
+.node-poll {
+  .node-title {
+    font-family: $helvetica-light;
+    font-weight: 200;
+    text-decoration: none;
+    @include adjust-font-size-to($h1-font-size);
+    a {
+      color: #0075BE;
+      text-decoration: none;
+    }
+    @media all and (max-width: 959px) {
+      @include adjust-font-size-to($h2-font-size);
+      line-height: 1.5em;
+    }
+  }
+}
+
+.node-promoted { /* A node that has been promoted to the front page */
+}
+
+.node-sticky { /* A sticky node (displayed before others in a list) */
+}
+
+.node-by-viewer { /* A node created by the current user */
+}
+
+.node-teaser { /* A node displayed as teaser */
+}
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+
+.node-page { /* Page content node */
+}
+
+.node-article { /* Article content node */
+}
+
+.node-unpublished { /* Unpublished nodes */
+  /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
+
+  p.unpublished { /* The word "Unpublished" displayed underneath the content. */
+    @include unpublished-div;
+  }
+}

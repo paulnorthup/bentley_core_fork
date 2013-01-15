@@ -1,0 +1,225 @@
+// slider fades in after load (see script.js)
+
+//Content width Slider
+#banner {
+  .view-core-slider {
+    height: 0;
+    overflow: hidden;
+  }
+  .flexslider {
+    .field-collection-container {
+      border: none;
+      margin: 0;
+    }
+    ul.slides {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul.flex-direction-nav {
+      list-style: none;
+      @include horizontal-list;
+      margin: 0 0 0 30px;
+      position: absolute;
+      top: 400px;
+      li {
+        margin: 0;
+        padding:0;
+        &:first-child {
+          border-right: 2px dashed #fff;
+        }
+      }
+      a {
+        @include border-radius;
+        text-decoration: none;
+        color: #fff;
+        background: #000;
+        font-size: 2em;
+        font-family: $caecilia-bold;
+        padding: rhythm(0.25);
+        display: block;
+        @include box-shadow;
+        &:hover {
+          background: #333;
+        }
+      }
+      body.logged-in.toolbar {
+        ul.flex-direction-nav {
+          top: 400px;
+        }
+      }
+    }
+    .field-collection-view {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+    .field-collection-container .field-items .field-item {
+      margin-bottom: 0;
+    }
+    .slide-wrap {
+      background-size: cover;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+    }
+    ul.action-links {
+      position: absolute;
+      top: 173px;
+      list-style: none;
+      margin: 0 0 0 30px;
+      li {
+        float: left;
+        clear: left;
+      }
+      a {
+        text-decoration: underline;
+        background: $black;
+        color: $white;
+        text-decoration: none;
+        padding: 6px 10px;
+        &:hover {
+          background: #333;
+        }
+      }
+    }
+    ul.field-collection-view-links {
+      position: absolute;
+      top: 200px;
+      margin: 0 0 0 30px;
+      li {
+        float: left;
+        clear: left;
+      }
+      a {
+        text-decoration: underline;
+        background: $black;
+        color: $white;
+        text-decoration: none;
+        padding: 6px 10px;
+        &:hover {
+          background: #333;
+        }
+      }
+    }
+    .slide-wrap {
+      a {
+        display: block;
+        margin: 30px 0 0 30px;
+        @include hover-link;
+        p {
+          display: inline-block;
+          color: $white;
+          background: $black; /* for IE */
+          background: rgba(0, 0, 0, 0.75);
+          float: left;
+          clear: left;
+          padding: 0 30px 0 10px;
+          &.heading-1 {
+            font-family: $helvetica-ultralight;
+            @include adjust-font-size-to($h2-font-size);
+          }
+          &.heading-2 {
+            font-family: $helvetica;
+            @include adjust-font-size-to($h1-font-size);
+            font-weight: 800;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// Full Width Slider
+.wrapper.banner.region-full-width {
+  margin-bottom: -30px;
+  #banner-container {
+    padding-bottom: 0;
+    #banner {
+      max-width: 100%;
+      .slide-wrap-full{
+        background-size: cover;
+        background-repeat: no-repeat\9; /* ie8 & below */
+        background-position: center\9;
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 360px;
+        .centered-content {
+          margin: 0 auto;
+          max-width: 1200px;
+        }
+        a {
+          display: block;
+          margin: 30px 0 0 30px;
+          @include hover-link;
+          p {
+            display: inline-block;
+            color: $white;
+            background: $black; /* for IE */
+            background: rgba(0, 0, 0, 0.75);
+            float: left;
+            clear: left;
+            &.heading-1 {
+              font-family: $helvetica-ultralight;
+              font-size: 1.75em;
+              padding: 5px 20px 0 10px;
+            }
+            &.heading-2 {
+              font-family: $helvetica;
+              font-size: 3em;
+              line-height: 1.75em;
+              font-weight: 800;
+              text-transform: uppercase;
+              padding: 5px 20px 0 10px;
+            }
+            &.heading-3 {
+              font-family: $caecilia-light;
+              font-size: 1.125em;
+              font-weight: 800;
+              padding: 10px 30px 10px 10px;
+              padding: 0 20px 10px 10px;
+            }
+          }
+        }
+      }
+      ul.flex-direction-nav {
+        margin: 0 auto;
+        max-width: 1200px;
+        display: block;
+        z-index: 2;
+        position: relative;
+        margin-top: -48px;
+        top: -40px;
+        right: -30px;
+        li {
+          margin: 0;
+          padding:0;
+          &:first-child {
+            border-right: 2px dashed #fff;
+          }
+        }
+        a {
+          @include border-radius;
+          text-decoration: none;
+          color: #fff;
+          background: #000;
+          font-size: 2em;
+          font-family: $caecilia-bold;
+          padding: rhythm(0.25);
+          display: block;
+          @include box-shadow;
+          &:hover {
+            background: #333;
+          }
+        }
+      }
+    }
+  }
+}

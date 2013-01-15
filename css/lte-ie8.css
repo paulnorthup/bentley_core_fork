@@ -1,0 +1,602 @@
+@import "http://fast.fonts.com/cssapi/a58e39be-56b2-4a98-a7eb-76d2609157b4.css";
+/*
+ * Use 8 grid columns for larger screens.
+ */
+/*
+ * The layout when there is only one sidebar, the left one.
+ */
+/* line 14, ../sass/lte-ie8.scss */
+.sidebar-first #content {
+  /* Span 4 columns, starting in 2nd column from left. */
+  float: left;
+  width: 75%;
+  margin-left: 25%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+}
+/* line 18, ../sass/lte-ie8.scss */
+.sidebar-first .region-sidebar-first {
+  /* Span 1 column, starting in 1st column from left. */
+  float: left;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: -25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  *width: auto;
+  *padding: 0;
+}
+
+/*
+ * The layout when there is only one sidebar, the right one.
+ */
+/* line 30, ../sass/lte-ie8.scss */
+.sidebar-second #content {
+  /* Span 4 columns, starting in 1st column from left. */
+  float: left;
+  width: 75%;
+  margin-left: 0%;
+  margin-right: -75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+}
+/* line 34, ../sass/lte-ie8.scss */
+.sidebar-second .region-sidebar-second {
+  /* Span 1 column, starting in 5th column from left. */
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  *width: auto;
+  *padding: 0;
+}
+
+/*
+ * The layout when there are two sidebars.
+ */
+/* line 46, ../sass/lte-ie8.scss */
+.two-sidebars #content {
+  /* Span 3 columns, starting in 2nd column from left. */
+  float: left;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: -75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+}
+/* line 50, ../sass/lte-ie8.scss */
+.two-sidebars .region-sidebar-first {
+  /* Span 1 column, starting in 1st column from left. */
+  float: left;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: -25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+}
+/* line 54, ../sass/lte-ie8.scss */
+.two-sidebars .region-sidebar-second {
+  /* Span 1 column, starting in 5th column from left. */
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+}
+
+/*
+ * The layout when there is only one sub sidebar, the left one.
+ */
+/* line 64, ../sass/lte-ie8.scss */
+.sub-sidebar-first #secondary-content {
+  /* Span 6 columns, starting in 3rd column from left. */
+  float: left;
+  width: 75%;
+  margin-left: 25%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+}
+/* line 68, ../sass/lte-ie8.scss */
+.sub-sidebar-first .region-sub-sidebar-first {
+  /* Span 2 column, starting in 2st column from left. */
+  float: left;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: -25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  *width: auto;
+  *padding: 0;
+}
+
+/*
+ * The layout when there is only one sub sidebar, the right one.
+ */
+/* line 80, ../sass/lte-ie8.scss */
+.sub-sidebar-second #secondary-content {
+  /* Span 6 columns, starting in 1st column from left. */
+  float: left;
+  width: 75%;
+  margin-left: 0%;
+  margin-right: -75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+}
+/* line 84, ../sass/lte-ie8.scss */
+.sub-sidebar-second .region-sub-sidebar-second {
+  /* Span 2 column, starting in 7th column from left. */
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  *width: auto;
+  *padding: 0;
+}
+
+/*
+ * The layout when there are two sub sidebars.
+ */
+/* line 96, ../sass/lte-ie8.scss */
+.two-sub-sidebars #secondary-content {
+  /* Span 6 columns, starting in 3nd column from left. */
+  float: left;
+  width: 75%;
+  margin-left: 25%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+}
+/* line 100, ../sass/lte-ie8.scss */
+.two-sub-sidebars .region-sub-sidebar-first {
+  /* Span 2 column, starting in 1st column from left. */
+  float: left;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: -25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  *width: auto;
+  *padding: 0;
+}
+/* line 106, ../sass/lte-ie8.scss */
+.two-sub-sidebars .region-sub-sidebar-second {
+  /* Span the bottom clear. */
+  float: left;
+  width: 75%;
+  margin-left: 25%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  clear: left;
+}
+
+/*
+* The foundation social block for IE
+*/
+/* line 121, ../sass/lte-ie8.scss */
+#foundation .block p {
+  border-right: 1px solid #007ac8;
+  text-align: center;
+}
+/* line 124, ../sass/lte-ie8.scss */
+#foundation .block p a {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  padding-left: 1.125em;
+  padding-right: 1.125em;
+  display: block;
+  border-right: 1px solid #005a9a;
+  text-decoration: none;
+}
+/* line 131, ../sass/lte-ie8.scss */
+#foundation .block p a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+  opacity: 0.65;
+}
+/* line 134, ../sass/lte-ie8.scss */
+#foundation .block p a span {
+  color: #000;
+}
+/* line 136, ../sass/lte-ie8.scss */
+#foundation .block p a span.heading {
+  color: #fff;
+}
+/* line 142, ../sass/lte-ie8.scss */
+#foundation .block.social-facebook {
+  float: left;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: -25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 146, ../sass/lte-ie8.scss */
+#foundation .block.social-facebook p {
+  border-left: 1px solid #005a9a;
+}
+/* line 148, ../sass/lte-ie8.scss */
+#foundation .block.social-facebook p a {
+  border-left: 1px solid #007ac8;
+}
+/* line 153, ../sass/lte-ie8.scss */
+#foundation .block.social-twitter {
+  float: left;
+  width: 25%;
+  margin-left: 25%;
+  margin-right: -50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 158, ../sass/lte-ie8.scss */
+#foundation .block.social-youtube {
+  float: left;
+  width: 25%;
+  margin-left: 50%;
+  margin-right: -75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 163, ../sass/lte-ie8.scss */
+#foundation .block.social-linkedin {
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 168, ../sass/lte-ie8.scss */
+#foundation .block.social-mail {
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*
+ * Use 16 grid columns for larger screens.
+ */
+/* line 182, ../sass/lte-ie8.scss */
+#tab {
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #0079c5), color-stop(100%, #008ce3));
+  background: -webkit-linear-gradient(bottom, #0079c5, #008ce3);
+  background: -moz-linear-gradient(bottom, #0079c5, #008ce3);
+  background: -o-linear-gradient(bottom, #0079c5, #008ce3);
+  background: linear-gradient(bottom, #0079c5, #008ce3);
+  overflow: hidden;
+  border-left: 1px solid #008ace;
+  border-right: 1px solid #008ace;
+  border-bottom: 1px solid #008ace;
+  height: 3em;
+}
+/* line 192, ../sass/lte-ie8.scss */
+#tab .lockup-container {
+  float: left;
+  width: 43.75%;
+  margin-left: 0%;
+  margin-right: -43.75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  border-right: 1px solid #006aac;
+  height: 3em;
+}
+/* line 198, ../sass/lte-ie8.scss */
+#tab .links-container {
+  display: block;
+  float: left;
+  width: 18.75%;
+  margin-left: 43.75%;
+  margin-right: -62.5%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  border-left: 1px solid #1f95d7;
+  border-right: 1px solid #006aac;
+  height: 3em;
+}
+/* line 205, ../sass/lte-ie8.scss */
+#tab .links-container a#info-link,
+#tab .links-container a#info-link-ie {
+  font-family: "Helvetica W01 Light Cn", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin: 0.75em 0;
+  display: block;
+  text-decoration: none;
+}
+/* line 4, ../../../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+#tab .links-container a#info-link:hover,
+#tab .links-container a#info-link-ie:hover {
+  text-decoration: underline;
+}
+/* line 215, ../sass/lte-ie8.scss */
+#tab .search-container {
+  display: block;
+  float: left;
+  width: 37.5%;
+  margin-left: 62.5%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+  border-left: 1px solid #1f95d7;
+  height: 3em;
+}
+/* line 220, ../sass/lte-ie8.scss */
+#tab .search-container .region-search {
+  margin: 0.75em 0 0;
+}
+/* line 222, ../sass/lte-ie8.scss */
+#tab .search-container .region-search input.form-text {
+  width: 60%;
+  background-image: none !important;
+}
+
+/* line 231, ../sass/lte-ie8.scss */
+#subheader {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 233, ../sass/lte-ie8.scss */
+#subheader .subhead-container {
+  float: left;
+  width: 62.5%;
+  margin-left: 0%;
+  margin-right: -62.5%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+}
+/* line 235, ../sass/lte-ie8.scss */
+#subheader .subhead-container h1.subhead {
+  font-size: 1.5em;
+  line-height: 2em;
+  color: #fff;
+  margin: 0.375em 0;
+}
+/* line 239, ../sass/lte-ie8.scss */
+#subheader .subhead-container h1.subhead a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #0075be;
+  -webkit-transition-property: border-color;
+  -moz-transition-property: border-color;
+  -o-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+/* line 245, ../sass/lte-ie8.scss */
+#subheader .subhead-container h1.subhead a:hover {
+  border-bottom: 1px solid #fff;
+}
+/* line 251, ../sass/lte-ie8.scss */
+#subheader .sub-links-container {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+  float: left;
+  width: 37.5%;
+  margin-left: 62.5%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  *behavior: url("/sites/all/theme/bentley_core/ie/boxsizing.htc");
+}
+/* line 254, ../sass/lte-ie8.scss */
+#subheader .sub-links-container ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  margin: 1.5em 0 0 0;
+  padding: 0;
+}
+/* line 258, ../sass/lte-ie8.scss */
+#subheader .sub-links-container ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: right;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+/* line 48, ../../../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#subheader .sub-links-container ul li:first-child, #subheader .sub-links-container ul li.first {
+  padding-right: 0;
+}
+/* line 49, ../../../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#subheader .sub-links-container ul li:last-child {
+  padding-left: 0;
+}
+/* line 50, ../../../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#subheader .sub-links-container ul li.last {
+  padding-left: 0;
+}
+/* line 260, ../sass/lte-ie8.scss */
+#subheader .sub-links-container ul li a {
+  font-family: "Helvetica W01 Light Cn", Helvetica, Arial, sans-serif;
+  font-size: 1.125em;
+  font-weight: 100;
+  color: #ddd;
+  text-decoration: none;
+}
+/* line 4, ../../../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+#subheader .sub-links-container ul li a:hover {
+  text-decoration: underline;
+}
+/* line 266, ../sass/lte-ie8.scss */
+#subheader .sub-links-container ul li a:hover {
+  color: #fff;
+}
